@@ -11,7 +11,7 @@ pipeline {
 				configFileProvider([configFile(fileId: "settings.xml", targetLocation: 'settings-copy.xml')]) {
 	                sh "mvn install \
 	                		-s settings-copy.xml \
-	                		-f '005 - Recording Test Results and Artifacts/Java Application'"
+	                		-f '005 - Recording Test Results and Artifacts/04 - Publish in Nexus'"
     			}
             }
         }
