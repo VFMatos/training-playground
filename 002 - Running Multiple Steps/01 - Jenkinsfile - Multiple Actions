@@ -5,5 +5,12 @@ pipeline {
 		}
 	}
     stages {
+		saveAndPrintDate("test")
+		sh "sleep 10s"
+		saveAndPrintDate("test2")
     }
+}
+
+def saveAndPrintDate(filename=''){
+	sh "date > $filename && cat $filename"
 }
