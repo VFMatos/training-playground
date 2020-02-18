@@ -6,9 +6,11 @@ pipeline {
 	}
     stages {
 	stage('build'){
-			saveAndPrintDate("test")
-			sh "sleep 10s"
-			saveAndPrintDate("test2")
+			steps{
+				saveAndPrintDate("test")
+				sh "sleep 10s"
+				saveAndPrintDate("test2")
+			}
 		}
     }
 }
